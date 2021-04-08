@@ -17,21 +17,27 @@ int isNumeric (const char * s)
 
 int main(int argc, char** argv)
 {   
-    int num_words = 3;
+    int num_words = 4;
     
     if(argc>2)
     {
         printf("Too many arguments");
+        return 0;
     }
     if(argc == 2)
     {
         if(isNumeric(argv[1]))
         {
             num_words = atoi(argv[1]);
+            if(num_words<1)
+            {
+                printf("Argument must be greater than or equal to 1");
+            }
         }
         else
         {
-            printf("Invalid argument");
+            printf("Argument is not a integer");
+            return 0;
         }
     }
     struct timespec tstart={0,0};
