@@ -5,7 +5,7 @@ A password generator translated into many languages:
 |   Python    |         ☑          |            ☑             |               ☑               |              ☑              |
 |      C      |         ☑          |            ☑             |               ☑               |              ☑              |
 |    Java     |         ☑          |            ☑             |               ☑               |              ☑              |
-|    Bash     |         ☑          |            ☑             |               ☑               |                             |
+|    Bash     |         ☑          |            ☑             |               ☑               |              ☑              |
 |    Dart     |         ☑          |            ☑             |                               |                             |
 |    Swift    |         ☑          |            ☑             |                               |                             |
 |   Kotlin    |                    |                          |                               |                             |
