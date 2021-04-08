@@ -21,5 +21,9 @@ swift:
 dart:
 	@$(PYTHON) Main.py dart
 
+java:
+	@$(PYTHON) Main.py java
+	@javac -d "Generators" "temp/Passgen.java"
 
-all: c python bash swift dart
+
+all: c python bash swift dart java
