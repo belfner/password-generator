@@ -21,6 +21,6 @@ A password generator translated into many languages:
 |   Matlab    |                    |                          |                               |                             |
 |    Perl     |                    |                          |                               |                             |
 |   Groovy    |                    |                          |                               |                             |
-| Powershell  |                    |                          |                               |                             |
+| Powershell  |         ☑          |            ☑             |               ☑               |              ☑              |
 | TypeScript  |                    |                          |                               |                             |
 

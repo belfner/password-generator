@@ -3,7 +3,7 @@ import argparse
 import os
 
 parser = argparse.ArgumentParser(description="Passgen builder")
-parser.add_argument('language', type=str, choices=['python', 'bash', 'c', 'swift', 'dart', 'java'], help="number of words in the password")
+parser.add_argument('language', type=str, choices=['python', 'bash', 'c', 'swift', 'dart', 'java','powershell'], help="number of words in the password")
 args = parser.parse_args()
 
 try:
@@ -20,20 +20,20 @@ except FileExistsError:
 def create_python_script(words):
     d = {'words': "'" + "', '".join(words) + "'"}
 
-    with open('Templates/passgen.py') as infile:
+    with open('templates/passgen.py') as infile:
         src = Template(infile.read())
 
-    with open('Generators/passgen.py', 'w') as outfile:
+    with open('build/passgen.py', 'w') as outfile:
         outfile.write(src.safe_substitute(d))
 
 
 def create_bash_script(words):
     d = {'words': " ".join(words)}
 
-    with open('Templates/passgen.sh') as infile:
+    with open('templates/passgen.sh') as infile:
         src = Template(infile.read())
 
-    with open('Generators/passgen.sh', 'w', newline='\n') as outfile:
+    with open('build/passgen.sh', 'w', newline='\n') as outfile:
         outfile.write(src.safe_substitute(d))
 
 
@@ -41,7 +41,7 @@ def create_c_script(words):
     max_len = max([len(word) for word in words]) + 1
     d = {'words': '"' + '", "'.join(words) + '"', 'num_words': len(words), 'max_len': max_len}
 
-    with open('Templates/passgen.c') as infile:
+    with open('templates/passgen.c') as infile:
         src = Template(infile.read())
 
     with open('temp/passgen.c', 'w') as outfile:
@@ -51,34 +51,48 @@ def create_c_script(words):
 def create_swift_script(words):
     d = {'words': '"' + '", "'.join(words) + '"'}
 
-    with open('Templates/passgen.swift') as infile:
+    with open('templates/passgen.swift') as infile:
         src = Template(infile.read())
 
-    with open('Generators/passgen.swift', 'w') as outfile:
+    with open('build/passgen.swift', 'w') as outfile:
         outfile.write(src.safe_substitute(d))
 
 
 def create_dart_script(words):
     d = {'words': "'" + "', '".join(words) + "'"}
 
-    with open('Templates/passgen.dart') as infile:
+    with open('templates/passgen.dart') as infile:
         src = Template(infile.read())
 
-    with open('Generators/passgen.dart', 'w') as outfile:
+    with open('build/passgen.dart', 'w') as outfile:
         outfile.write(src.safe_substitute(d))
 
 def create_java_script(words):
     d = {'words': '"' + '", "'.join(words) + '"'}
 
-    with open('Templates/Passgen.java') as infile:
+    with open('templates/Passgen.java') as infile:
         src = Template(infile.read())
 
     with open('temp/Passgen.java', 'w') as outfile:
         outfile.write(src.safe_substitute(d))
 
+def create_powershell_script(words):
+    d = {'words': "'" + "', '".join(words) + "'"}
 
-creators = {'python': create_python_script, 'bash': create_bash_script, 'c': create_c_script, 'swift': create_swift_script, 'dart': create_dart_script,'java':create_java_script}
+    with open('templates/passgen.ps1') as infile:
+        src = Template(infile.read())
 
+    with open('build/passgen.ps1', 'w') as outfile:
+        outfile.write(src.safe_substitute(d))
+
+
+creators = {'python': create_python_script,
+            'bash': create_bash_script,
+            'c': create_c_script,
+            'swift': create_swift_script,
+            'dart': create_dart_script,
+            'java':create_java_script,
+            'powershell':create_powershell_script}
 with open('words.txt') as infile:
     words = infile.read().split('\n')
 

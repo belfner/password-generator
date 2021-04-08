@@ -8,6 +8,10 @@ args = parser.parse_args()
 
 words = [$words]
 
+if args.num < 1:
+    print('Argument must be greater than or equal to 1')
+    exit()
+
 password = ''
 for x in range(args.num):
     password += choice(words)

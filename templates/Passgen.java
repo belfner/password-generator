@@ -34,17 +34,14 @@ public class Passgen {
 
         String password = "";
 
-        for(int x = 0; x< num_words;x++)
+        for(int x = 0; x< num_words - 1;x++)
         {
             password += words[Passgen.rand.nextInt(words.length)];
-
-            if(x+1 != num_words)
-            {
-                password += ".";
-            }
+            password += ".";
 
         }
 
+        password += words[Passgen.rand.nextInt(words.length)];
         password += Character.toString(Passgen.upper.charAt(Passgen.rand.nextInt(Passgen.upper.length())));
         password += Character.toString(Passgen.digits.charAt(Passgen.rand.nextInt(Passgen.digits.length())));
         System.out.println(password);

@@ -23,7 +23,9 @@ dart:
 
 java:
 	@$(PYTHON) Main.py java
-	@javac -d "Generators" "temp/Passgen.java"
+	@javac -d "build" "temp/Passgen.java"
 
+powershell:
+	@$(PYTHON) Main.py powershell
 
-all: c python bash swift dart java
+all: c python bash swift dart java powershell
