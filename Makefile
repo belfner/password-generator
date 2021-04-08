@@ -7,7 +7,7 @@ endif
 
 c: 
 	@$(PYTHON) Main.py c
-	@gcc "temp/passgen.c" -o "Generators/passgen.exe"
+	@gcc "temp/passgen.c" -o "build/passgen.exe"
 
 python: 
 	@$(PYTHON) Main.py python

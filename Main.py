@@ -7,7 +7,7 @@ parser.add_argument('language', type=str, choices=['python', 'bash', 'c', 'swift
 args = parser.parse_args()
 
 try:
-    os.mkdir('Build')
+    os.mkdir('build')
 except FileExistsError:
     pass
 
