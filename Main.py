@@ -1,9 +1,20 @@
 from string import Template
 import argparse
+import os
 
 parser = argparse.ArgumentParser(description="Passgen builder")
 parser.add_argument('language', type=str, choices=['python', 'bash', 'c', 'swift', 'dart', 'java'], help="number of words in the password")
 args = parser.parse_args()
+
+try:
+    os.mkdir('Build')
+except FileExistsError:
+    pass
+
+try:
+    os.mkdir('temp')
+except FileExistsError:
+    pass
 
 
 def create_python_script(words):
