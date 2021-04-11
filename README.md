@@ -6,7 +6,7 @@ A password generator translated into many languages:
 |      C      |         ☑          |            ☑             |               ☑               |              ☑              |
 |    Java     |         ☑          |            ☑             |               ☑               |              ☑              |
 |    Bash     |         ☑          |            ☑             |               ☑               |              ☑              |
-|    Dart     |         ☑          |            ☑             |                               |                             |
+|    Dart     |         ☑          |            ☑             |               ☑               |              ☑              |
 |    Swift    |         ☑          |            ☑             |                               |                             |
 |   Kotlin    |                    |                          |                               |                             |
 | JavaScript  |                    |                          |                               |                             |
