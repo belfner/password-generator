@@ -129,6 +129,7 @@ class Java(PassgenTest):
     def test_invalid_argument(self):
         self.invalid_argument()
 
+
 class Powershell(PassgenTest):
     name = 'powershell'
     file = 'build/passgen.ps1'
@@ -145,6 +146,7 @@ class Powershell(PassgenTest):
 
     def test_invalid_argument(self):
         self.invalid_argument()
+
 
 class Dart(PassgenTest):
     name = 'dart'
@@ -163,6 +165,7 @@ class Dart(PassgenTest):
     def test_invalid_argument(self):
         self.invalid_argument()
 
+
 class Php(PassgenTest):
     name = 'php'
     file = 'build/passgen.php'
@@ -179,6 +182,7 @@ class Php(PassgenTest):
 
     def test_invalid_argument(self):
         self.invalid_argument()
+
 
 if __name__ == '__main__':
     unittest.main()
