@@ -108,14 +108,20 @@ class Python(PassgenTest):
 
 class Java(PassgenTest):
     name = 'java'
-    file = 'build/Passgen.class'
+    file = 'Passgen.class'
     basic_command = ['java', 'Passgen']
 
+    def test_check_build(self):
+        self.check_build()
+    
     def custom_setup(self):
         os.chdir('build')
 
     def custom_teardown(self):
         os.chdir('..')
+
+    def test_check_build(self):
+        self.check_build()
 
     def test_basic(self):
         self.basic()
@@ -135,6 +141,9 @@ class Powershell(PassgenTest):
     file = 'build/passgen.ps1'
     basic_command = ['powershell', file]
 
+    def test_check_build(self):
+        self.check_build()
+
     def test_basic(self):
         self.basic()
 
@@ -152,6 +161,9 @@ class Dart(PassgenTest):
     name = 'dart'
     file = 'build/passgen.dart'
     basic_command = ['dart', file]
+
+    def test_check_build(self):
+        self.check_build()
 
     def test_basic(self):
         self.basic()
@@ -171,6 +183,9 @@ class Php(PassgenTest):
     file = 'build/passgen.php'
     basic_command = ['php', file]
 
+    def test_check_build(self):
+        self.check_build()
+
     def test_basic(self):
         self.basic()
 
@@ -187,6 +202,9 @@ class Ruby(PassgenTest):
     name = 'ruby'
     file = 'build/passgen.rb'
     basic_command = ['ruby', file]
+
+    def test_check_build(self):
+        self.check_build()
 
     def test_basic(self):
         self.basic()
