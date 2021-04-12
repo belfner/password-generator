@@ -31,4 +31,4 @@ powershell:
 php:
 	@$(PYTHON) Main.py php
 
-all: c python bash swift dart java powershell
+all: c python bash swift dart java powershell php
