@@ -3,7 +3,7 @@ import argparse
 import os
 
 parser = argparse.ArgumentParser(description="Passgen builder")
-parser.add_argument('language', type=str, choices=['python', 'bash', 'c', 'swift', 'dart', 'java','powershell','php'], help="number of words in the password")
+parser.add_argument('language', type=str, choices=['python', 'bash', 'c', 'swift', 'dart', 'java', 'powershell', 'php', 'ruby'], help="number of words in the password")
 args = parser.parse_args()
 
 try:
@@ -67,6 +67,7 @@ def create_dart_script(words):
     with open('build/passgen.dart', 'w') as outfile:
         outfile.write(src.safe_substitute(d))
 
+
 def create_java_script(words):
     d = {'words': '"' + '", "'.join(words) + '"'}
 
@@ -76,6 +77,7 @@ def create_java_script(words):
     with open('temp/Passgen.java', 'w') as outfile:
         outfile.write(src.safe_substitute(d))
 
+
 def create_powershell_script(words):
     d = {'words': "'" + "', '".join(words) + "'"}
 
@@ -84,6 +86,7 @@ def create_powershell_script(words):
 
     with open('build/passgen.ps1', 'w') as outfile:
         outfile.write(src.safe_substitute(d))
+
 
 def create_php_script(words):
     d = {'words': '"' + '", "'.join(words) + '"'}
@@ -95,14 +98,25 @@ def create_php_script(words):
         outfile.write(src.safe_substitute(d))
 
 
+def create_ruby_script(words):
+    d = {'words': '"' + '", "'.join(words) + '"'}
+
+    with open('templates/passgen.rb') as infile:
+        src = Template(infile.read())
+
+    with open('build/passgen.rb', 'w') as outfile:
+        outfile.write(src.safe_substitute(d))
+
+
 creators = {'python': create_python_script,
             'bash': create_bash_script,
             'c': create_c_script,
             'swift': create_swift_script,
             'dart': create_dart_script,
-            'java':create_java_script,
-            'powershell':create_powershell_script,
-            'php':create_php_script}
+            'java': create_java_script,
+            'powershell': create_powershell_script,
+            'php': create_php_script,
+            'ruby': create_ruby_script}
 with open('words.txt') as infile:
     words = infile.read().split('\n')
 

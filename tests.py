@@ -183,6 +183,22 @@ class Php(PassgenTest):
     def test_invalid_argument(self):
         self.invalid_argument()
 
+class Ruby(PassgenTest):
+    name = 'ruby'
+    file = 'build/passgen.rb'
+    basic_command = ['ruby', file]
+
+    def test_basic(self):
+        self.basic()
+
+    def test_variable_length(self):
+        self.variable_length()
+
+    def test_negative_length(self):
+        self.negative_length()
+
+    def test_invalid_argument(self):
+        self.invalid_argument()
 
 if __name__ == '__main__':
     unittest.main()

@@ -14,7 +14,7 @@ A password generator translated into many languages:
 |    Rust     |                    |                          |                               |                             |
 |     Go      |                    |                          |                               |                             |
 |     PHP     |         ☑          |            ☑             |               ☑               |              ☑              |
-|    Ruby     |                    |                          |                               |                             |
+|    Ruby     |         ☑          |            ☑             |               ☑               |              ☑              |
 |     VBA     |                    |                          |                               |                             |
 | Objective-C |                    |                          |                               |                             |
 |      R      |                    |                          |                               |                             |
