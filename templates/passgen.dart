@@ -9,11 +9,11 @@ class Passgen {
 
   static String genPass(int numWords) {
     String password = '';
-    for (var i = 0; i < numWords - 1; i++) {
+    for (var i = 0; i < numWords; i++) {
       password += Passgen.words[_random.nextInt(Passgen.words.length)];
       password += '.';
     }
-    password += Passgen.words[_random.nextInt(Passgen.words.length)];
+
     password += Passgen.upperLetters[_random.nextInt(Passgen.upperLetters.length)];
     password += Passgen.digits[_random.nextInt(Passgen.digits.length)];
     return password;

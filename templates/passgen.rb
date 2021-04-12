@@ -29,7 +29,7 @@ password = ""
 
 i = 0
 loop do
-    if i == num_words-1
+    if i == num_words
         break
     end
     password += words.sample
@@ -39,7 +39,6 @@ loop do
 
 end
 
-password += words.sample
 password += upper_letters.sample
 password += digits.sample
 

@@ -11,12 +11,12 @@ class PassgenTest(unittest.TestCase):
 
     @staticmethod
     def count_words(output):
-        r = re.findall('([a-z]+)', output)
+        r = re.findall('([a-z]+\.)', output)
         return len(r)
 
     @staticmethod
     def check_structure(output):
-        match = re.search(r'((?:[a-z]+\.)*(?:[a-z]+)[A-Z][0-9])$', output)
+        match = re.search(r'((?:[a-z]+\.)+[A-Z][0-9])$', output)
         return True if match else False
 
     def custom_setup(self):

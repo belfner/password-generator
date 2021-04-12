@@ -47,10 +47,10 @@ int main(int argc, char** argv)
     char upper[] = "ABCDEFGHIJKLMNPQRSTUVWXYZ";
     char digits[] = "0123456789";
     char words[$num_words][$max_len] = {$words};
-    for (int i =0;i<num_words-1;i++)
+    for (int i =0;i<num_words;i++)
     {
         printf("%s.", words[rand() % ARR_SIZE(words)]);
     }
-    printf("%s%c%c", words[rand() % ARR_SIZE(words)], upper[rand() % (ARR_SIZE(upper)-1)], digits[rand() % (ARR_SIZE(digits)-1)]);
+    printf("%c%c", upper[rand() % (ARR_SIZE(upper)-1)], digits[rand() % (ARR_SIZE(digits)-1)]);
     return 0;
 }

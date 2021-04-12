@@ -12,7 +12,7 @@ class Passgen
             password += Passgen.words.randomElement()!
             password += "."
         }
-        password = String(password.dropLast(1))
+
         password += Passgen.upper_letters.randomElement()!
         password += Passgen.digits.randomElement()!
         return password

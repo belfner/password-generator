@@ -16,7 +16,7 @@ password = ''
 for x in range(args.num):
     password += choice(words)
     password += '.'
-password = password[:-1]
+
 password += choice(string.ascii_uppercase)
 password += choice(string.digits)
 print(password)
