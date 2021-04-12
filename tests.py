@@ -163,5 +163,22 @@ class Dart(PassgenTest):
     def test_invalid_argument(self):
         self.invalid_argument()
 
+class Php(PassgenTest):
+    name = 'php'
+    file = 'build/passgen.php'
+    basic_command = ['php', file]
+
+    def test_basic(self):
+        self.basic()
+
+    def test_variable_length(self):
+        self.variable_length()
+
+    def test_negative_length(self):
+        self.negative_length()
+
+    def test_invalid_argument(self):
+        self.invalid_argument()
+
 if __name__ == '__main__':
     unittest.main()

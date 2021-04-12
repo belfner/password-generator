@@ -13,7 +13,7 @@ A password generator translated into many languages:
 |     C#      |                    |                          |                               |                             |
 |    Rust     |                    |                          |                               |                             |
 |     Go      |                    |                          |                               |                             |
-|     PHP     |                    |                          |                               |                             |
+|     PHP     |         ☑          |            ☑             |               ☑               |              ☑              |
 |    Ruby     |                    |                          |                               |                             |
 |     VBA     |                    |                          |                               |                             |
 | Objective-C |                    |                          |                               |                             |

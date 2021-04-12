@@ -3,7 +3,7 @@ import argparse
 import os
 
 parser = argparse.ArgumentParser(description="Passgen builder")
-parser.add_argument('language', type=str, choices=['python', 'bash', 'c', 'swift', 'dart', 'java','powershell'], help="number of words in the password")
+parser.add_argument('language', type=str, choices=['python', 'bash', 'c', 'swift', 'dart', 'java','powershell','php'], help="number of words in the password")
 args = parser.parse_args()
 
 try:
@@ -85,6 +85,15 @@ def create_powershell_script(words):
     with open('build/passgen.ps1', 'w') as outfile:
         outfile.write(src.safe_substitute(d))
 
+def create_php_script(words):
+    d = {'words': '"' + '", "'.join(words) + '"'}
+
+    with open('templates/passgen.php') as infile:
+        src = Template(infile.read())
+
+    with open('build/passgen.php', 'w') as outfile:
+        outfile.write(src.safe_substitute(d))
+
 
 creators = {'python': create_python_script,
             'bash': create_bash_script,
@@ -92,7 +101,8 @@ creators = {'python': create_python_script,
             'swift': create_swift_script,
             'dart': create_dart_script,
             'java':create_java_script,
-            'powershell':create_powershell_script}
+            'powershell':create_powershell_script,
+            'php':create_php_script}
 with open('words.txt') as infile:
     words = infile.read().split('\n')
 

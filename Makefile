@@ -28,4 +28,7 @@ java:
 powershell:
 	@$(PYTHON) Main.py powershell
 
+php:
+	@$(PYTHON) Main.py php
+
 all: c python bash swift dart java powershell
