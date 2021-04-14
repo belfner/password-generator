@@ -29,10 +29,11 @@ $digits = array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
 
 $password = "";
 
-for ($i=0; $i < $num_words; $i++) {
+for ($i=0; $i < $num_words - 1; $i++) {
     $password .= $word_list[array_rand($word_list,1)];
     $password .= ".";
 }
+$password .= $word_list[array_rand($word_list,1)];
 $password .= $upper_letters[array_rand($upper_letters,1)];
 $password .= $digits[array_rand($digits,1)];
 echo $password;

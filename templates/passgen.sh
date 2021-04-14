@@ -18,11 +18,12 @@ else
 fi
 
 password=""
-for i in $(seq 1 $((num_words))); do
+for i in $(seq 1 $((num_words-1))); do
   password+="${words[RANDOM % ${#words[@]}]}"
   password+="."
 done
 
+password+="${words[RANDOM % ${#words[@]}]}"
 password+="${upper[RANDOM % ${#upper[@]}]}"
 password+="${digits[RANDOM % ${#digits[@]}]}"
 echo $password
