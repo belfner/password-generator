@@ -1,13 +1,15 @@
 ifeq ($(OS),Windows_NT)
     PYTHON := python
+    EXECUTABLE := passgen.exe
 else
     PYTHON := python3
+    EXECUTABLE := passgen
 endif
 
 
 c: 
 	@$(PYTHON) Main.py c
-	@gcc "temp/passgen.c" -o "build/passgen.exe"
+	@gcc "temp/passgen.c" -o "build/$(EXECUTABLE)"
 
 python: 
 	@$(PYTHON) Main.py python
