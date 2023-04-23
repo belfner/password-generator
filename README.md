@@ -38,18 +38,18 @@ I improved that format by adding periods after each word and adding a capitol le
 
 This table shows how long to crack a password of different strengths at different hash rates.
 
-| Bits | 10 H/s  |  1KH/s   |  1Mh/s   | 50 GH/s GTX1080 | [632GH/s AWS](https://www.thesecurityfactory.be/password-cracking-speed/) |  1EH/s  |
-| :--: | :-----: | :------: | :------: | :-------------: | :----------------------------------------------------------: | :-----: |
-|  10  |  51 s   |  0.5 s   |   0 s    |       0 s       |                             0 s                              |   0 s   |
-|  20  |  14 h   |   9 m    |  0.5 s   |       0 s       |                             0 s                              |   0 s   |
-|  30  |  1.7 y  |   6 d    |   9 m    |     0.01 s      |                             0 s                              |   0 s   |
-|  40  | 1,742 y |   17 y   |   6 d    |      11 s       |                             1 s                              |   0 s   |
-|  50  |    -    | 17,839 y |   18 y   |       3 h       |                             15 m                             |   0 s   |
-|  60  |    -    |    -     | 18,266 y |      133 d      |                             11 d                             | 0.115 s |
-|  70  |    -    |    -     |    -     |      374 y      |                             30 y                             |   2 m   |
-|  80  |    -    |    -     |    -     |    383,085 y    |                           30,307 y                           |   2 d   |
-|  90  |    -    |    -     |    -     |        -        |                              -                               |   4 y   |
-| 100  |    -    |    -     |    -     |        -        |                              -                               | 4017 y  |
+| Bits | 10 H/s  |  1KH/s   |  1Mh/s   | 50 GH/s GTX1080 | [632GH/s AWS](https://www.thesecurityfactory.be/password-cracking-speed/) |  1EH/s   |
+| :--: | :-----: | :------: | :------: | :-------------: | :----------------------------------------------------------: | :------: |
+|  10  |  51 s   |  0.5 s   |   0 s    |       0 s       |                             0 s                              |   0 s    |
+|  20  |  14 h   |   9 m    |  0.5 s   |       0 s       |                             0 s                              |   0 s    |
+|  30  |  1.7 y  |   6 d    |   9 m    |     0.01 s      |                             0 s                              |   0 s    |
+|  40  | 1,742 y |   17 y   |   6 d    |      11 s       |                             1 s                              |   0 s    |
+|  50  |    -    | 17,839 y |   18 y   |       3 h       |                             15 m                             |   0 s    |
+|  60  |    -    |    -     | 18,266 y |      133 d      |                             11 d                             | 0.576 s  |
+|  70  |    -    |    -     |    -     |      374 y      |                             30 y                             |   10 m   |
+|  80  |    -    |    -     |    -     |    383,085 y    |                           30,307 y                           |   7 d    |
+|  90  |    -    |    -     |    -     |        -        |                              -                               |   20 y   |
+| 100  |    -    |    -     |    -     |        -        |                              -                               | 20,085 y |
 
 ##### Assumptions:
 
