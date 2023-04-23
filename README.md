@@ -85,25 +85,25 @@ To use this repo, create a file named "words.txt" and populate it with the words
 
 |  Language   | Password Generator | Variable password length | Parses command line arguments | Handles incorrect arguments |
 | :---------: | :----------------: | :----------------------: | :---------------------------: | :-------------------------: |
-|   Python    |         ☑          |            ☑             |               ☑               |              ☑              |
-|      C      |         ☑          |            ☑             |               ☑               |              ☑              |
-|    Java     |         ☑          |            ☑             |               ☑               |              ☑              |
 |    Bash     |         ☑          |            ☑             |               ☑               |              ☑              |
-|    Dart     |         ☑          |            ☑             |               ☑               |              ☑              |
-|    Swift    |         ☑          |            ☑             |                               |                             |
-|   Kotlin    |                    |                          |                               |                             |
-| JavaScript  |                    |                          |                               |                             |
+|      C      |         ☑          |            ☑             |               ☑               |              ☑              |
 |     C#      |                    |                          |                               |                             |
-|    Rust     |                    |                          |                               |                             |
+|    Dart     |         ☑          |            ☑             |               ☑               |              ☑              |
 |     Go      |                    |                          |                               |                             |
-|     PHP     |         ☑          |            ☑             |               ☑               |              ☑              |
-|    Ruby     |         ☑          |            ☑             |               ☑               |              ☑              |
-|     VBA     |                    |                          |                               |                             |
-| Objective-C |                    |                          |                               |                             |
-|      R      |                    |                          |                               |                             |
-|   Matlab    |                    |                          |                               |                             |
-|    Perl     |                    |                          |                               |                             |
 |   Groovy    |                    |                          |                               |                             |
+|    Java     |         ☑          |            ☑             |               ☑               |              ☑              |
+| JavaScript  |                    |                          |                               |                             |
+|   Kotlin    |                    |                          |                               |                             |
+|   Matlab    |                    |                          |                               |                             |
+| Objective-C |                    |                          |                               |                             |
+|    Perl     |                    |                          |                               |                             |
+|     PHP     |         ☑          |            ☑             |               ☑               |              ☑              |
 | Powershell  |         ☑          |            ☑             |               ☑               |              ☑              |
+|   Python    |         ☑          |            ☑             |               ☑               |              ☑              |
+|      R      |                    |                          |                               |                             |
+|    Ruby     |         ☑          |            ☑             |               ☑               |              ☑              |
+|    Rust     |                    |                          |                               |                             |
+|    Swift    |         ☑          |            ☑             |                               |                             |
 | TypeScript  |                    |                          |                               |                             |
+|     VBA     |                    |                          |                               |                             |
 
