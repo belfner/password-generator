@@ -1,7 +1,8 @@
-words=($words)
+#!/bin/bash
+declare -a words=($words)
 
-upper=(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)
-digits=(0 1 2 3 4 5 6 7 8 9)
+declare -a upper=(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)
+declare -a digits=(0 1 2 3 4 5 6 7 8 9)
 
 if [ $# -eq 0 ]; then
   declare -i num_words=4
