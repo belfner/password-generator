@@ -9,7 +9,7 @@ endif
 
 c: 
 	@$(PYTHON) Main.py c
-	@gcc "temp/passgen.c" -o "build/$(EXECUTABLE)"
+	@gcc "temp/passgen.c" -lssl -lcrypto -o "build/passgen"
 
 python: 
 	@$(PYTHON) Main.py python
