@@ -28,7 +28,7 @@ def create_python_script(words):
 
 
 def create_bash_script(words):
-    d = {'words': " ".join(words)}
+    d = {'words': ' '.join(words)}
 
     with open('templates/passgen.sh') as infile:
         src = Template(infile.read())
