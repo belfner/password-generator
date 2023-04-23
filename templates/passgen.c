@@ -51,6 +51,6 @@ int main(int argc, char** argv)
     {
         printf("%s.", words[rand() % ARR_SIZE(words)]);
     }
-    printf("%s%c%c", words[rand() % ARR_SIZE(words)], upper[rand() % (ARR_SIZE(upper)-1)], digits[rand() % (ARR_SIZE(digits)-1)]);
+    printf("%s%c%c\n", words[rand() % ARR_SIZE(words)], upper[rand() % (ARR_SIZE(upper)-1)], digits[rand() % (ARR_SIZE(digits)-1)]);
     return 0;
 }
