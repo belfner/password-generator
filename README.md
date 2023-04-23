@@ -104,6 +104,7 @@ To use this repo, create a file named "words.txt" and populate it with the words
 |    Ruby     |         ☑          |            ☑             |               ☑               |              ☑              |
 |    Rust     |                    |                          |                               |                             |
 |    Swift    |         ☑          |            ☑             |                               |                             |
+|     Tcl     |         ☑          |            ☑             |               ☑               |              ☑              |
 | TypeScript  |                    |                          |                               |                             |
 |     VBA     |                    |                          |                               |                             |
 

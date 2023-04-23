@@ -2,10 +2,6 @@ from string import Template
 import argparse
 import os
 
-parser = argparse.ArgumentParser(description="Passgen builder")
-parser.add_argument('language', type=str, choices=['python', 'bash', 'c', 'swift', 'dart', 'java', 'powershell', 'php', 'ruby'], help="number of words in the password")
-args = parser.parse_args()
-
 try:
     os.mkdir('build')
 except FileExistsError:
@@ -108,6 +104,15 @@ def create_ruby_script(words):
         outfile.write(src.safe_substitute(d))
 
 
+def create_tcl_script(words):
+    d = {'words': " ".join(words)}
+    with open('templates/passgen.tcl') as infile:
+        src = Template(infile.read())
+
+    with open('build/passgen.tcl', 'w') as outfile:
+        outfile.write(src.safe_substitute(d))
+
+
 creators = {'python': create_python_script,
             'bash': create_bash_script,
             'c': create_c_script,
@@ -116,7 +121,13 @@ creators = {'python': create_python_script,
             'java': create_java_script,
             'powershell': create_powershell_script,
             'php': create_php_script,
-            'ruby': create_ruby_script}
+            'ruby': create_ruby_script,
+            'tcl': create_tcl_script}
+
+parser = argparse.ArgumentParser(description="Passgen builder")
+parser.add_argument('language', type=str, choices=creators.keys(), help="number of words in the password")
+args = parser.parse_args()
+
 with open('words.txt') as infile:
     words = infile.read().split('\n')
 
